@@ -4,6 +4,8 @@ angular
     .controller('MainCtrl', MainCtrl);
 MainCtrl.$inject = ['$scope', 'DataPreload','localStorageService'];
 function MainCtrl($scope, DataPreload,localStorageService) {
-    localStorageService.set('toDo', DataPreload.getData());
+    if(!localStorageService.get('toDo')){
+        localStorageService.set('toDo', DataPreload.getData());
+    }
     $scope.toDo = localStorageService.get('toDo');
 };

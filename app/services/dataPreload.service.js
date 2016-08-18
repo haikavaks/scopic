@@ -1,6 +1,3 @@
-/**
- * Created by Avakian on 5/8/2016.
- */
 'use strict';
 angular
     .module('toDoList')
@@ -9,29 +6,38 @@ DataPreload.$inject = [];
 function DataPreload() {
     return {
         getData: function () {
-            return {
-                'home': [
-                    {'buy bread' : 0 } ,
-                    {'wash plates' : 1},
-                    {'cook something' : 1},
-                    {'clean rooms' : 1},
-                    {'repair TV' : 1}
-                ],
-                'job': [
-                    {'open mail': 0 },
-                    {'watch tasks' : 0 } ,
-                    {'estimate time': 0 },
-                    {'participate in stand up': 0 } ,
-                    {'do tasks': 0 }
-                ],
-                'holidays': [
-                    {'take clothes' : 1},
-                    {'get glasses' : 0} ,
-                    {'take a car' : 1},
-                    {'break phone' : 0} ,
-                    {'hide quickly' : 1}
-                ]
-            }
+            return [
+                {
+                    name: 'home',
+                    children: [
+                        {name: 'buy bread', doneStatus: false},
+                        {name: 'wash plates', doneStatus: true},
+                        {name: 'cook something', doneStatus:  false},
+                        {name: 'clean rooms', doneStatus:  true},
+                        {name: 'repair TV', doneStatus:  true}
+                    ]
+                },
+                {
+                    name: 'job',
+                    children: [
+                        {name: 'open mail', doneStatus: false},
+                        {name: 'watch tasks', doneStatus: false},
+                        {name: 'estimate time', doneStatus: false},
+                        {name: 'participate in stand up', doneStatus: false},
+                        {name: 'do tasks', doneStatus: false}
+                    ]
+                },
+                {
+                    name: 'holidays',
+                    children: [
+                        {name: 'take clothes', doneStatus:  true},
+                        {name: 'get glasses', doneStatus: false},
+                        {name: 'take a car', doneStatus: true},
+                        {name: 'break phone', doneStatus: false},
+                        {name: 'hide quickly', doneStatus: false}
+                    ]
+                }
+            ];
         }
     };
 

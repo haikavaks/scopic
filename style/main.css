@@ -1,0 +1,80 @@
+html, body, list {
+    height: 100%;
+}
+
+a, span {
+    color: #bfbfbf;
+    font-size: 1.5em;
+}
+
+list {
+    display: flex;
+}
+
+list ul {
+    margin: auto;
+    background: #2e323f;
+    padding: 2%;
+    box-shadow: 1px 1px 1px 1px #465252;
+    min-height: 80%;
+    min-width: 50%;
+}
+
+.child_ul {
+    background: #232733;
+}
+
+.first_level {
+    margin: 10px 0;
+}
+
+.second_level a, .second_level span {
+    font-size: 1.3em;
+}
+
+.second_level span {
+    cursor: pointer;
+}
+
+a:hover, .glyphicon:hover {
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+
+.glyphicon-trash {
+    color: #c54e4e;
+}
+
+.glyphicon-ok {
+    color: green;
+}
+
+.done {
+    text-decoration: line-through;
+}
+
+.active {
+    color: white;
+}
+
+.filter_button {
+    display: inline-block;
+    border: 1px solid #404755;
+}
+
+.filter_button a {
+    border-right: 1px solid #404755;
+    padding: 0 15px;
+    display: inline-block;
+}
+
+.addItem {
+    background: #7d8393;
+    color: white;
+    border-color: #a7b2d0;
+}
+
+.addItemText {
+    padding-left: 10px;
+}
