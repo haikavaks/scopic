@@ -4,5 +4,4 @@ angular
     .config(function (localStorageServiceProvider) {
         localStorageServiceProvider
             .setPrefix('toDoList');
-    })
-;
+    });
