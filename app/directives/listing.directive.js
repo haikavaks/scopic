@@ -23,6 +23,7 @@ angular
                 /* expand 2 level*/
                 scope.show = [];
                 scope.expand = function (key) {
+                    scope.show = [];
                     scope.show[key] = !scope.show[key];
                 };
                 //default open first
